@@ -3,40 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurants</title>
-
-  <!--- CSS link --->
-  <link rel="stylesheet" href="style.css">
-  <!--- JS link --->
-  <script src="main.js" defer></script>
+  <title>Restaurant Directory</title>
+  <link rel="stylesheet" href="/app/style.css">
+  <script src="/app/js/main.js" type="module" defer></script>
 </head>
 
 <body>
-  <nav>
-    <h1>Restaurants</h1>
-    <form id="filter-buttons">
-      <input type="radio" class="filter-button" id="all" name="restaurant-filter" value="All" checked>
-      <label for="all">All</label>
-      <input type="radio" class="filter-button" id="sodexo" name="restaurant-filter" value="Sodexo">
-      <label for="sodexo">Sodexo</label>
-      <input type="radio" class="filter-button" id="compass" name="restaurant-filter" value="Compass">
-      <label for="compass">Compass</label>
-    </form>
-  </nav>
-
-  <main>
-    <table>
+  <h1>Restaurant Directory</h1>
+  <label for="all">All</label>
+  <input type="radio" id="all" name="filter" checked>
+  <label for="sodexo">Sodexo</label>
+  <input type="radio" id="sodexo" name="filter">
+  <label for="compass">Compass Group</label>
+  <input type="radio" id="compass" name="filter">
+  <table>
+    <thead>
       <tr>
         <th>Name</th>
-        <th>Address</th>
+        <th>Company</th>
       </tr>
-      <!-- restaurants -->
-    </table>
-    <!-- modal -->
-    <dialog>
-      <!-- restaurant information -->
-    </dialog>
-  </main>
-
+    </thead>
+    <tbody><!-- Restaurants will be dynamically added here --></tbody>
+  </table>
+  <!-- Modal Dialog -->
+  <dialog>
+    <!-- Restaurant details will be shown here when clicked -->
+  </dialog>
 </body>
 </html>
